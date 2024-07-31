@@ -1,0 +1,42 @@
+{
+    "兴趣推荐": {
+        "Headers": {
+            "Audios": ":red[1.音乐：]",
+            "SP_Videos": ":orange[2.科普视频]"
+        },
+        "Audios": {
+            "Audio_1.mp3": "[①《原神》剧情PV-「神女劈观」](https://www.bilibili.com/video/BV1kS4y1T7kK)",
+            "Audio_2.mp3": "[②《原神》角色演示「钟离：听书人」](https://www.bilibili.com/video/BV1hD4y1X7Rm)"
+        },
+        "SP_Videos": {
+            "https://www.bilibili.com/video/BV1Ap4y1w7a9": "[万字详拆芯片：人类算力被锁死了吗?](https://www.bilibili.com/video/BV1Ap4y1w7a9)―――――――――――――[:green[Bilibili@宁拨打的用户正忙]](https://space.bilibili.com/3546390628141921)",
+            "https://www.bilibili.com/video/BV1Mo4y1Z7jb/": "[吹牛还是真牛?苹果M1全网最硬核评测(上)](https://www.bilibili.com/video/BV1Mo4y1Z7jb/)―――――――――――[:green[Bilibili@极客湾Geekerwan]](https://space.bilibili.com/25876945)",
+            "https://www.bilibili.com/video/BV1vb411h7DD/": "[【科普】DirectX和OpenGL：游戏为什么离不开它们?](https://www.bilibili.com/video/BV1vb411h7DD/)―――――[:green[Bilibili@极客湾Geekerwan]](https://space.bilibili.com/25876945)",
+            "https://space.bilibili.com/14871346/channel/collectiondetail?sid=550815": "[合集·硬核科普](https://space.bilibili.com/14871346/channel/collectiondetail?sid=550815)――――――――――――――――――――――――――[:green[Bilibili@硬件茶谈]](https://space.bilibili.com/14871346)"
+        }
+    },
+    "图片处理工具": {
+        ":orange[反色]滤镜": "对图片进行:green[反色处理]",
+        "增强:orange[对比度]": "让图片颜色:green[更加鲜艳]",
+        "增强:orange[亮度]": "让图片:green[更亮]",
+        ":orange[锐化]": "让图片:green[更清晰]",
+        ":orange[黑白]滤镜": "将图片变为:green[灰度图]"
+    },
+    "Games": {
+        "[1.HexGL(赛车游戏)](https://hexgl.bkcore.com/)": {
+            "url": "https://hexgl.bkcore.com/play/",
+            "width": 650,
+            "height": 700
+        },
+        "[2.植物大战僵尸：旅行](https://www.jiangnangame.com/)": {
+            "url": "https://shuntpvz.jiangnangame.com/play/",
+            "width": 1000,
+            "height": 580
+        },
+        "[3.植物大战僵尸：冒险时光2](https://www.bilibili.com/video/BV1pr4y1N7hW)": {
+            "url": "https://g.evkgame.cn/182856",
+            "width": 1000,
+            "height": 580
+        }
+    }
+}
