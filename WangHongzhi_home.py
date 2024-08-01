@@ -32,7 +32,6 @@ with open("text.json", "r", encoding="utf-8") as f:
     text_dict = load(f)
 
 try:
-    print(hide)
     if hide == False:
         hide = False
 except:
@@ -68,7 +67,7 @@ def page2():
     '''我的图片处理工具'''
     global text_dict
     header_write("📸:orange[**图片处理工具**]📸", [5, 10, 4])
-    uploader_file = st.file_uploader("上传图片", type=["png", "jpg", "gif", "jped"])
+    uploader_file = st.file_uploader("上传图片", type=["png", "jpg", "gif", "jpeg"])
 
     if uploader_file:
         f_name = uploader_file.name
@@ -122,7 +121,6 @@ def page2():
                         except:
                             sharp = "0"
                         expression = "img_p.img_change_" + k + "(img, contrast_ratio, bright, sharp)"
-                        print(expression)
                         img = eval(expression)
                 st.write(":slightly_smiling_face: :green[图像处理完毕！请右键“另存为”以保存图片]:slightly_smiling_face:")
                 st.image(img)
@@ -137,15 +135,17 @@ def page3():
         words_list = f.read().split("\n")
     for i in range(len(words_list)):
         words_list[i] = words_list[i].split("#")
-    words_dict = {}
-    for i in words_list:
-        words_dict[i[1]] = [int(i[0]), i[2]]
 
     words_dict_2 = {}
     with open("EnWords.csv", encoding="utf-8") as csv:
         reader = DictReader(csv)
         for row in reader:
             words_dict_2[row["word"]] = row["translation"]
+        words_dict = {}
+        for i in words_list:
+            if i[1] in words_dict.keys():
+                continue
+            words_dict_2[i[1]] = i[2]
 
     with open("check_out_times.txt", "r", encoding="utf-8") as f:
         times_list = f.read().split("\n")
@@ -154,34 +154,13 @@ def page3():
     times_dict = {}
     for i in times_list:
         times_dict[i[0]] = int(i[1])
-
-    mode = st.selectbox(
-        ":red[请选择选择数据库]",
-        options=("数据库1 词量少 速度快", "数据库2 词量多 速度慢")
-    )
-    if "1" in mode:
-        mode = 1
-    elif "2" in mode:
-        mode = 2
             
     word = st.text_input("请输入要查询的:green[单词]: ")
     if word:
         if word == "genshin impact":
             st.balloons()
             st.write(":green[UID:297510837], page1->text_input->hide space")
-        elif word == "hide space":
-            hide = False
-            st.balloons()
-        elif mode == 1: 
-            if word in words_dict:
-                check_out_times(word, times_dict)
-                st.write("单词编号: " + str(words_dict[word][0]))
-                st.write("译义: " + words_dict[word][1])
-                st.write("查询次数: ", times_dict[word])
-
-            else:
-                st.write("当前数据库无此单词,请更换数据库后尝试")
-        elif mode == 2:
+        else:
             check_out_times(word, times_dict)
             if word in words_dict_2:
                 st.write("译义: " + words_dict_2[word])
@@ -278,7 +257,6 @@ def guess_number():
         st.subheader(":blue[4.猜数字游戏]", anchor=False)
     with col2:
         t = st.toggle(":green[开始游戏]", key="toggle")
-    # with st.expander("数字生成完毕"):
     if t:
         pass
     else:
@@ -300,6 +278,7 @@ def guess_number():
         elif isa < st.session_state["num"]:
             st.write("猜小了")
 
+# page_bg()
 
 if page == "兴趣推荐":
     page1()

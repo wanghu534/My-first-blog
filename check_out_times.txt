@@ -1,5 +1,7 @@
-eat#7
+eat#12
 word#1
-python#10
+python#15
 home#1
 space#1
+eatpython#1
+apply#1
