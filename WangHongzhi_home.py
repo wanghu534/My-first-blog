@@ -61,7 +61,7 @@ def page1():
             hide = False
     if hide == False:
         st.subheader("Games", anchor=False)
-        st.write("Left 4 Dead 2, Genshin impact and ZZZ all are too good to make me play them unhappily!")
+        st.write("Left 4 Dead 2, Genshin impact and ZZZ all are too good to make me play them happily!")
      
 def page2():
     '''我的图片处理工具'''
